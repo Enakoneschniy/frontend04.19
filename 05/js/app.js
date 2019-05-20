@@ -148,6 +148,7 @@
     }
 
     const nUser = new NUser('NPetya', 'NPupkin');
+    const nUser2 = new NUser('NPetya2', 'NPupkin2');
     const nSuperUser = new NSuperUser('NPetya', 'NPupkin', 'etewr@gmail.com');
     console.log(nUser);
     console.log(nSuperUser);
