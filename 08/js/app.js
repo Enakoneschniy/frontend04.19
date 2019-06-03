@@ -17,8 +17,9 @@ $('#calcForm').submit(function (e) {
     $('#result').html(eval(jsStr));
 });
 
-$('.add').click(function () {
-    $('.container').append('<button class="btn">Text</button>');
+$('.btn').click(function () {
+    console.log('click');
+    // $('.container').append('<button class="btn">Text</button>');
 });
 
 $('.btn1').one('click', function () {
