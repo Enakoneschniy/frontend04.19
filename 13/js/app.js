@@ -16,7 +16,7 @@
             </tr>`, '');
     }
 
-    const users = await getUsers();
+    let users = await getUsers();
     render(users);
 
     document.querySelector('thead tr')
@@ -24,7 +24,7 @@
             const tag = e.target;
             if (tag.classList.contains('t-header')) {
                 const property = tag.getAttribute('data-prop');
-                users.sort((a, b) => {
+                users = users.sort((a, b) => {
                     if (a[property] > b[property]) {
                         return 1;
                     } else if (a[property] < b[property]) {
@@ -32,6 +32,7 @@
                     }
                     return 0;
                 });
+                render(users);
                 console.log(
                     tag.getAttribute('data-prop'),
                     tag.getAttribute('data-sort'))
