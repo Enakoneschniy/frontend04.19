@@ -12,6 +12,13 @@
             th.addEventListener('click', e => {
                 console.log(e.target.getAttribute('data-prop'))
             })
+        });
+    document.querySelector('thead tr')
+        .addEventListener('click',e => {
+            const tag = e.target;
+            if(tag.classList.contains('.t-header')) {
+                console.log(tag.getAttribute('data-prop'))
+            }
         })
 })();
 
