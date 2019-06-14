@@ -16,8 +16,8 @@
     document.querySelector('thead tr')
         .addEventListener('click',e => {
             const tag = e.target;
-            if(tag.classList.contains('.t-header')) {
-                console.log(tag.getAttribute('data-prop'))
+            if(tag.classList.contains('t-header')) {
+                console.log(tag.getAttribute('data-prop'), tag.getAttribute('data-sort'))
             }
         })
 })();
