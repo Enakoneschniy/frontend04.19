@@ -7,7 +7,12 @@
         const tableBody = document.getElementById('users-table-body');
     }
     render(await getUsers());
-
+    [].slice.call(document.querySelectorAll('.t-header'))
+        .forEach(th => {
+            th.addEventListener('click', e => {
+                console.log(e.target.getAttribute('data-prop'))
+            })
+        })
 })();
 
 
